@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Natalia Grechannikova](https://up.htmlacademy.ru/htmlcss/36/user/2078305).
-* Наставник: `Неизвестно`.
+* Наставник: `Ирина Антипина`https://htmlacademy.ru/profile/id2108789.
 
 ---
 
