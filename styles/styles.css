@@ -1,14 +1,13 @@
-@font-face {
-  font-famiily: "PT Sans";
+@font-face  {
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-
-  src: url(../fonts/ptsans-400.woff2) format(woff2);
+src: url ("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
-@font-face {
-  font-famiily: "PT Sans";
+@font-face  {
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
 
@@ -17,7 +16,10 @@
 }
 
 body {
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+
 }
