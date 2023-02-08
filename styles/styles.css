@@ -41,13 +41,22 @@ body {
 }
 
 .main-index {
+  font-family: "PT Sans", sans-serif;
   color: #000000;
   background-color: #ffffff;
+  text-align: center;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
+.main-title .description-title {
+  font-family: "PT Sans" sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
 
+}
 .reasons-list {
   text-align: center;
 }
@@ -55,5 +64,13 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+
+}
+.reasons-item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  background-color: #82B3D3;
 
 }
