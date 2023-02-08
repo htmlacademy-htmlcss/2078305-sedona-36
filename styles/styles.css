@@ -49,7 +49,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-.main-title .description-title {
+.main-title, .description-title {
   font-family: "PT Sans" sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -60,12 +60,7 @@ body {
 .reasons-list {
   text-align: center;
 }
-.reasons-title {
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
 
-}
 .reasons-item {
   font-weight: 700;
   font-size: 24px;
@@ -73,4 +68,10 @@ body {
   color: #ffffff;
   background-color: #82B3D3;
 
+}
+
+.reasons-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
 }
