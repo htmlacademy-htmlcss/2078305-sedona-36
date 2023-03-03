@@ -14,7 +14,7 @@
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="логотип Седоны.">
           </a>
-          <ul class="navigation-link">
+          <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html">Главная</a>
             </li>
@@ -22,7 +22,7 @@
               <a class="navigation-link" href="#">О седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link-current" href="#">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
@@ -61,7 +61,7 @@
 
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура</legend>
-                  <ol class="catalog-filter-list">
+                  <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input class="control-input" type="checkbox" name="Swimming-pool" checked>
@@ -80,7 +80,7 @@
                         Wi-Fi
                       </label>
                     </li>
-                  </ol>
+                  </ul>
                 </Fieldset>
 
                 <fieldset class="catalog-filter-group">
@@ -113,17 +113,16 @@
               </form>
             </section>
       </div>
-
-      <section class="select-list">
+<div class="hotel-card-conteiner">
+      <section class="hotel-sorting">
         <h2 class="hotel-founded">Найдено гостиниц: 38</h2>
-
-        <select class="select-control" area-label="Сортировка">
+        <select class="select-control" aria-label="Сортировка">
           <option value="cheep_hotel">Сначала дешевые</option>
           <option value="expensive_hotel">Сначала дорогие</option>
           <option value="popular_hotel">Сначала популярные</option>
         </select>
         <a class="button button-current" href="#">
-          <span class="visually hidden">Показать карточки</span></a>
+          <span class="visually hidden">Показать карточки.</span></a>
 
         <a class="button" href="#">
           <span class="visually hidden">Показать каждую.</span>
@@ -205,6 +204,7 @@
           <a class="pagination-link" href="#">10</a>
         </li>
       </ol>
+    </div>
 
       <section class="subscribe-catalog">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -212,13 +212,14 @@
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="subscribe-field" class="visually-hidden">E-mail.</label>
-          <input type="text" id="subscribe-field" name="subscribe-field" placeholder="Ваш e-mail" required>
+          <input class="e-mail-form" type="email" id="subscribe-field" name="subscribe-field" placeholder="Ваш e-mail" required>
           <button class="button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
       </main>
 
       <footer class="page-footer">
+        <div class="page-footer-conteiner">
         <section class="footer-social">
           <h2 class="visually-hiden">социальные сети.</h2>
           <ul class="footer-social-list">
@@ -250,7 +251,7 @@
             <img src="images/html-academy.svg" width="115" height="33" alt="Логотип html accademy">
           </a>
         </section>
-
+      </div>
       </footer>
     </div>
 
