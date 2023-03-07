@@ -137,22 +137,20 @@ body {
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-color: #4197cd;
-  background-size: 100% auto;
+  background-size: over;
 
 }
 
 .sedona-text {
   width: 458px;
-  margin-top: 51px;
-  margin-bottom: 82px;
+  padding-top: 51px;
+  padding-bottom: 82px;
 
 
 }
 
 .welcome-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
   padding-top: 69px;
   padding-bottom: 69px;
 
@@ -227,9 +225,6 @@ body {
 }
 
 .description {
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   padding-top: 64px;
   padding-bottom: 64px;
@@ -379,12 +374,12 @@ body {
 }
 
 .e-mail-form {
-
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  width: 452px;
 }
 
 .button-subscribe {
@@ -407,13 +402,13 @@ body {
 
 }
 
-.page-footer-conteiner {
-  width: 1060px;
+.page-footer {
   display: flex;
-  margin: 0 auto;
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .footer-social {
@@ -489,7 +484,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: over;
   width: 1200px;
 
 
@@ -602,8 +597,7 @@ body {
   display: flex;
   padding-left: 70px;
   padding-top: 50px;
-
-
+  padding-right: 70px;
 
 }
 
@@ -618,15 +612,26 @@ body {
 
 .button-every {}
 
+.hotels-card-conteiner {
+  margin-top: 40px;
+  padding-left: 70px;
+  padding-bottom: 70px;
+  width: 1060px;
+}
+
 .hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
   margin-bottom: 40px;
+  gap: 20px;
 
 }
 
 .hotel-card {
+  display: grid;
   background-color: #ffffff;
 }
 
@@ -708,8 +713,8 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   color: #ffffff;
   background-color: #82b3d3;
   font-weight: 700;
@@ -731,6 +736,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #000000;
+  background-color: #ffffff;
 }
 
 .subscribe-catalog {
