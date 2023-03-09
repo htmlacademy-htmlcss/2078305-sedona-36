@@ -78,11 +78,15 @@ body {
 .navigation-list {
   display: flex;
   margin: 0 auto;
-
   list-style-type: none;
 
 
+}
 
+
+.icons {
+  display: flex;
+  margin-right: 20px;
 }
 
 .navigation-user {
@@ -90,8 +94,23 @@ body {
   min-height: 64px;
   max-width: 308px;
 
+}
+
+.navigation-user .navigation-item:nth-child(1) .navigation-link {
+  background-image: url("../images/icon/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
+
+.navigation-user .navigation-item:nth-child(2) .navigation-link {
+  background-image: url("../images/icon/favourite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
 
 .navigation-link {
   display: block;
@@ -198,7 +217,7 @@ body {
 }
 
 .reasons-item-town {
-display: flex;
+  display: flex;
   grid-column: 1/-1;
 }
 
@@ -207,8 +226,9 @@ display: flex;
   width: 400px;
   padding: 102px 85px 102px 85px;
 }
+
 .reasons-item-bridge {
-display: flex;
+  display: flex;
   grid-column: 1/-1;
 }
 
@@ -278,6 +298,7 @@ display: flex;
 }
 
 .adventures-item {
+
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -300,10 +321,28 @@ display: flex;
 }
 
 .adventures-description {
-margin: 0;
+  margin: 0;
 
 }
 
+.adventures-home {
+  background-image: url("../images/icon/stays.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.adventures-food {
+  background-image: url(../images/icon/food.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.adventures-souvenirs {
+  background-image: url(../images/icon/souvenires.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .search-hotel {
 
   width: 592px;
@@ -441,10 +480,7 @@ margin: 0;
 }
 
 
-.button-social {
-  background-color: #82b3d3;
 
-}
 
 .page-footer {
   display: flex;
@@ -456,7 +492,7 @@ margin: 0;
 }
 
 .footer-social {
-  display: flex;
+
   max-width: 180px;
   margin: 0;
 }
@@ -474,6 +510,27 @@ margin: 0;
   min-width: 46px;
   min-height: 46px;
 
+}
+
+.footer-social-link {
+display: block;
+background-color: #ffffff;
+background-position: center;
+background-size: 48px;
+}
+
+.footer-social-vk {
+  background-image: url("../images/social/social-vk.svg");
+
+}
+
+.footer-social-tg {
+
+background-image: url("../images/social/social-telegram.svg");
+}
+
+.footer-social-youtube {
+  background-image: url("../images/social/social-youtube.svg");
 }
 
 .footer-contacts {
@@ -641,7 +698,7 @@ margin: 0;
 
 .icons-cards {
   display: grid;
-  grid-template-columns: repeat(3,48px);
+  grid-template-columns: repeat(3, 48px);
   min-width: 160px;
   gap: 8px;
 }
