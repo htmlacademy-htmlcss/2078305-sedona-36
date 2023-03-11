@@ -64,7 +64,12 @@ body {
 .page-header-logo {
   display: block;
   width: 140px;
-  margin-right: 28px;
+
+
+
+}
+
+.navigation-logo {
   position: absolute;
 
 }
@@ -80,11 +85,13 @@ body {
   display: flex;
   list-style-type: none;
   width: 450px;
-  margin: o;
-
-
+  margin: 0;
+  padding: 0;
 }
 
+.navigation-menu {
+  margin-left: 170px;
+}
 
 .icons {
   display: flex;
@@ -95,24 +102,52 @@ body {
   min-width: 44px;
   max-width: 308px;
   justify-content: end;
+  margin: 0;
+  align-items: center;
 
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-link-search {
   background-image: url("../images/icon/search.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
 
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-link-fav {
+  position: relative;
   background-image: url("../images/icon/favourite.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
 
 }
 
+.green-circle {
 
+  position: absolute;
+  background: #7DB54F;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateX(4px) translateY(-20px);
+
+
+}
+
+.number-added {
+  position: absolute;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  padding: 5px 5px 5px 4px;
+
+
+}
 
 .navigation-link {
   display: block;
@@ -126,9 +161,6 @@ body {
   padding: 20px 16px;
 }
 
-.navigation-user {
-  margin: 0;
-}
 
 .button-want {
   font-family: "PT Sans", sans-serif;
@@ -138,9 +170,9 @@ body {
   color: #FFFFFF;
   background-color: #756157;
   text-transform: uppercase;
-  margin-top: 14px;
   padding: 8px 50px;
   border-radius: 4px;
+  margin-left: 20px;
 }
 
 .main-index {
@@ -268,8 +300,10 @@ body {
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 62px;
+  position: relative;
 
 }
+
 
 .reasons-description {
   margin: 0;
@@ -311,6 +345,7 @@ body {
   color: #000000;
   background-color: rgba(131, 179, 211, 0.12);
   padding: 81px 85px;
+  padding-top: 183px;
 }
 
 .accent-white {
@@ -334,20 +369,22 @@ body {
 .adventures-home {
   background-image: url("../images/icon/stays.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 81px;
+
 
 }
 
 .adventures-food {
   background-image: url(../images/icon/food.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 82px;
+
 }
 
 .adventures-souvenirs {
   background-image: url(../images/icon/souvenires.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 79px;
 }
 
 .search-hotel {
@@ -847,17 +884,18 @@ body {
 }
 
 .star4 {
-width: calc(4em + 18px);
+  width: calc(4em + 18px);
 }
 
 .star3 {
-background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%, url("../images/rating-star.svg") no-repeat 48px 50%;
+  background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%, url("../images/rating-star.svg") no-repeat 48px 50%;
 
 }
 
 .star2 {
- background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%;
+  background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%;
 }
+
 .rating {
   font-size: 16px;
   background: #f2f2f2;
