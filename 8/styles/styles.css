@@ -64,7 +64,12 @@ body {
 .page-header-logo {
   display: block;
   width: 140px;
-  margin-right: 28px;
+
+
+
+}
+
+.navigation-logo {
   position: absolute;
 
 }
@@ -80,11 +85,13 @@ body {
   display: flex;
   list-style-type: none;
   width: 450px;
-  margin: o;
-
-
+  margin: 0;
+  padding: 0;
 }
 
+.navigation-menu {
+  margin-left: 170px;
+}
 
 .icons {
   display: flex;
@@ -95,24 +102,52 @@ body {
   min-width: 44px;
   max-width: 308px;
   justify-content: end;
+  margin: 0;
+  align-items: center;
 
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-link-search {
   background-image: url("../images/icon/search.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
 
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-link-fav {
+  position: relative;
   background-image: url("../images/icon/favourite.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
 
 }
 
+.green-circle {
 
+  position: absolute;
+  background: #7DB54F;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateX(4px) translateY(-20px);
+
+
+}
+
+.number-added {
+  position: absolute;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  padding: 5px 5px 5px 4px;
+
+
+}
 
 .navigation-link {
   display: block;
@@ -126,9 +161,21 @@ body {
   padding: 20px 16px;
 }
 
-.navigation-user {
-  margin: 0;
+.navigation-link:hover {
+  background-color: #f2f2f2;
+  opacity: 0, 6;
 }
+
+.navigation-link:focus {
+  background-color: #f2f2f2;
+  opacity: 0.8;
+}
+
+.navigation-link:active {
+  background-color: #f2f2f2;
+  opacity: 0.3;
+}
+
 
 .button-want {
   font-family: "PT Sans", sans-serif;
@@ -138,9 +185,9 @@ body {
   color: #FFFFFF;
   background-color: #756157;
   text-transform: uppercase;
-  margin-top: 14px;
   padding: 8px 50px;
   border-radius: 4px;
+  margin-left: 20px;
 }
 
 .main-index {
@@ -177,7 +224,8 @@ body {
 .welcome-text {
 
   padding-top: 69px;
-  padding-bottom: 21px;
+  padding-bottom: 69px;
+  margin-bottom: 21px;
 
 }
 
@@ -196,8 +244,9 @@ body {
 
 .text-description {
   margin: 0;
-  padding-bottom: 69px;
+
 }
+
 
 
 .reasons-list {
@@ -263,13 +312,31 @@ body {
 
 
 .reasons-title {
+
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 62px;
+  position: relative;
 
 }
+
+.reasons-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 88px;
+  left: 85px
+}
+
+.reasons-title-white::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 
 .reasons-description {
   margin: 0;
@@ -311,6 +378,7 @@ body {
   color: #000000;
   background-color: rgba(131, 179, 211, 0.12);
   padding: 81px 85px;
+  padding-top: 183px;
 }
 
 .accent-white {
@@ -334,20 +402,22 @@ body {
 .adventures-home {
   background-image: url("../images/icon/stays.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 81px;
+
 
 }
 
 .adventures-food {
   background-image: url(../images/icon/food.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 82px;
+
 }
 
 .adventures-souvenirs {
   background-image: url(../images/icon/souvenires.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 79px;
 }
 
 .search-hotel {
@@ -469,7 +539,14 @@ body {
   font-size: 18px;
   line-height: 24px;
   width: 452px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  padding-left: 20px;
+  background: #f2f2f2;
+
 }
+
+
 
 .button-subscribe {
   font-family: "PT Sans", sans-serif;
@@ -483,6 +560,8 @@ body {
   text-transform: uppercase;
   border: none;
   padding: 8px 50px 8px 50px;
+  border-radius: 0 4px 4px 0;
+
 
 }
 
@@ -506,10 +585,8 @@ body {
 
 .footer-social-list {
   display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
+
 }
 
 .footer-social-item {
@@ -521,7 +598,7 @@ body {
 
 
 .footer-social-link {
-  padding: 10px;
+
   color: #83b3d3;
 }
 
@@ -531,11 +608,8 @@ body {
 
 
 
-.footer-contacts {
-  margin-right: 40px;
-  margin-left: 40px;
 
-}
+
 
 .phone-contacts {
   font-family: "PT Sans", sans-serif;
@@ -545,6 +619,63 @@ body {
 }
 
 .html-accademy {}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+
+  background: rgba(242, 242, 242, 0.8);
+}
+
+.modal-auth {
+  min-width: 576px;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 64px 70px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  background-image: url("../images/icon/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: 64px 52px 460px 613px;
+  border: none;
+
+}
+
+
+
+
+.modal-title {
+font-family: "PT Sans", sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 36px;
+text-transform: uppercase;
+margin: 0;
+padding-right: 130px;
+}
+
 
 .main-inner {
   font-family: "PT Sans", sans-serif;
@@ -561,14 +692,15 @@ body {
   line-height: 78px;
   margin: 0;
   padding-top: 35px;
-  padding-left: 75px;
   text-align: left;
 
 }
 
 .inner-header {
-  display: flex;
+
   flex-direction: column;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 
@@ -590,7 +722,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
-  margin: o;
+  margin-bottom: 45pxs;
   padding: 0;
 
 }
@@ -610,7 +742,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   display: flex;
-  width: 412px;
+
 }
 
 .catalog-filter-list {
@@ -637,6 +769,13 @@ body {
   overflow: hidden;
 }
 
+.buttonns-group-filter {
+display: flex;
+flex-direction: column;
+margin-left: 70px;
+
+}
+
 .button-go {
   font-family: inherit;
   font-weight: 700;
@@ -646,6 +785,9 @@ body {
   background-color: #82b3d3;
   text-transform: uppercase;
   border: none;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  padding: 8px 50px 8px 50px;
 
 }
 
@@ -658,6 +800,7 @@ body {
   background-color: transparent;
   text-transform: uppercase;
   border: none;
+
 
 }
 
@@ -847,17 +990,18 @@ body {
 }
 
 .star4 {
-width: calc(4em + 18px);
+  width: calc(4em + 18px);
 }
 
 .star3 {
-background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%, url("../images/rating-star.svg") no-repeat 48px 50%;
+  background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%, url("../images/rating-star.svg") no-repeat 48px 50%;
 
 }
 
 .star2 {
- background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%;
+  background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%;
 }
+
 .rating {
   font-size: 16px;
   background: #f2f2f2;
@@ -891,6 +1035,7 @@ background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rat
   line-height: 36px;
   text-decoration: none;
   padding: 12px 24px;
+  border-radius: 4px;
 
 }
 
