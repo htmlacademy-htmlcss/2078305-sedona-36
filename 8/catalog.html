@@ -56,7 +56,9 @@
               <li class="bredcrambs-item">
                 <a class="breadcrambs-link breadcrambs-link-home" href="index.html"></a>
                 <span class="visually-hidden">Главная.</span>
-
+              </li>
+              <li class="arrow">
+                <span class="visually-hidden">затем.</span>
               </li>
               <li class="bredcrambs-item">
                 <a class="breadcrambs-link">Гостиницы</a>
@@ -117,8 +119,25 @@
 
                 <fieldset class="price-filter">
                   <legend class="price-filter-title">Стоимость, ₽:</legend>
-                  <input class="price-filter-from" type="text" name="less-price" value="0">0</label>
-                  <input class="price-filter-to" type="text" name="top-price" value="9000">9000</label>
+
+                  <div class="rang">
+                    <div class="range-wrapper-inputs">
+                      <label class="catalog-filter-label">
+                        <input class="price-filter-from" type="number" name="less-price" value="0"
+                          placeholder="от"></label>
+                      <label class="catalog-filter-label">
+                        <input class="price-filter-to" type="number" name="top-price" value="9000"
+                          placeholder="до"></label>
+                    </div>
+
+                    <div class="range-scale">
+                      <div class="range-bar" style="width: 226px">
+                        <button class="rang-toggle toggle-min" type="button"></button>
+                        <button class="rang-toggle toggle-max" type="button"></button>
+
+                      </div>
+                    </div>
+                  </div>
                 </fieldset>
 
                 <div class="buttonns-group-filter">
