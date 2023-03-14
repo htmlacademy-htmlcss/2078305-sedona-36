@@ -1048,9 +1048,8 @@ margin-left: 46px;
 
 }
 
-.button-cards-current {
-  background-image: url(../images/icon/);
-}
+
+
 
 .hotel-card-conteiner {
   display: flex;
@@ -1089,6 +1088,10 @@ margin-left: 46px;
 }
 
 .button-cards-current {
+  background-image: url(.);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: #000000;
   width: 48px;
   height: 48px;
 }
