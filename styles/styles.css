@@ -665,8 +665,6 @@ body {
 }
 
 
-
-
 .modal-title {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -680,16 +678,19 @@ body {
 }
 
 
+
 .modal-for-label {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   align-items: center;
+  margin-right: 10px;
 }
 
-.modal-form-for-arrival-date {
-  display: flex;
-  justify-content: space-between;
+.modal-form-for-date {
+  display: grid;
+  grid-template-columns: auto 440px;
+  align-items: center;
 
 }
 
@@ -701,28 +702,29 @@ font-size: 18px;
 line-height: 24px;
   width: 440px;
   background-color: #f2f2f2;
+  background-image: url(../images/icon/calendar.svg);
+  background-position: right 10px center;
+  background-repeat: no-repeat;
   border-radius: 4px;
   border: none;
-  padding: 12px 295px 12px 20px;
-  margin-left: 24px;
+  padding: 12px 250px 12px 20px;
 
 }
 
-.eroor-comment {
+.error-comment {
+  grid-column: 2/3;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: #ff5757;
   margin: 0;
   padding-bottom: 48px;
-}
-
-.modal-form-for-departure-date {
-  display: flex;
-  justify-content: space-between;
-
+  padding-left: 20px;
+  padding-right: 20px;
 
 }
+
+
 
 .field-date-departure {
   font-family: "PT Sans", sans-serif;
@@ -731,26 +733,76 @@ line-height: 24px;
 font-size: 18px;
 line-height: 24px;
   width: 440px;
+  background-image: url(../images/icon/calendar.svg);
+  background-repeat: no-repeat;
+background-position: right 10px center;
   background-color: #f2f2f2;
   border-radius: 4px;
   border: none;
-  padding: 12px 295px 12px 20px;
+  padding: 12px 250px 12px 20px;
 
 }
 
 .comment {
+  grid-column: 2/3;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   margin: 0;
   padding-bottom: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+
 
 }
 
+.modal-for-adults {
+  margin-right: 55px;
+}
 .modal-form-for-persons {
-justify-content: space-between;
+  display: flex;
+
   padding-bottom: 48px;
 }
+
+.people-group {
+  display: flex;
+  height: 48px;
+}
+
+.people-group:first-of-type {
+  margin-right: 88px;
+}
+.form-label {
+  display: flex;
+}
+
+.people-minus {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding: 23px 13px;
+ text-align: center;
+}
+
+.people-plus {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding: 17px 13px;
+}
+
+.modal-input-persons {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 14px 10px;
+font-family: "PT Sans", sans-serif;
+font-weight: 700;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+}
+
 
 .button-found {
   font-family: 'PT Sans';
@@ -766,10 +818,13 @@ justify-content: space-between;
   border: none;
 }
 
+.button-found:hover {
+background-color: #68a2ca;
+
+}
+
 .tooltip {
 position: absolute;
-margin-top: 6px;
-margin-left: 279px;
 width: 256px;
 height: 143px;
 
@@ -814,6 +869,25 @@ width: 256px;
 
 .tooltip-icon:hover + .tooltip-text {
   display: block;
+}
+
+.tooltip-text::before {
+content: "";
+  background-image: url("../images/icon/triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  transform: rotate(180deg);
+  top: 100%;
+  left: calc(50% - 10px);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.children-group {
+
+margin-left: 46px;
 }
 
 .modal-input-persons {
@@ -886,6 +960,15 @@ width: 256px;
   line-height: 23px;
   display: flex;
 
+
+}
+
+.catalog-filter-group {
+  border: none;
+}
+
+.price-filter {
+  border: none;
 }
 
 .catalog-filter-list {
@@ -963,6 +1046,10 @@ width: 256px;
   width: 292px;
   margin-right: 70px;
 
+}
+
+.button-cards-current {
+  background-image: url(../images/icon/);
 }
 
 .hotel-card-conteiner {
