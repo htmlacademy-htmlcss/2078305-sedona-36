@@ -64,25 +64,34 @@ body {
 .page-header-logo {
   display: block;
   width: 140px;
-  margin-right: 28px;
+
+
+
+}
+
+.navigation-logo {
   position: absolute;
 
 }
 
 .navigation {
   display: flex;
+  justify-content: space-between;
 
 
 }
 
 .navigation-list {
   display: flex;
-  margin: 0 auto;
   list-style-type: none;
-
-
+  width: 450px;
+  margin: 0;
+  padding: 0;
 }
 
+.navigation-menu {
+  margin-left: 170px;
+}
 
 .icons {
   display: flex;
@@ -91,26 +100,54 @@ body {
 
 .navigation-user {
   min-width: 44px;
-  min-height: 64px;
   max-width: 308px;
+  justify-content: end;
+  margin: 0;
+  align-items: center;
 
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-link-search {
   background-image: url("../images/icon/search.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
 
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-link-fav {
+  position: relative;
   background-image: url("../images/icon/favourite.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 44px;
 
 }
 
+.green-circle {
 
+  position: absolute;
+  background: #7DB54F;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateX(4px) translateY(-20px);
+
+
+}
+
+.number-added {
+  position: absolute;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  padding: 5px 5px 5px 4px;
+
+
+}
 
 .navigation-link {
   display: block;
@@ -124,6 +161,22 @@ body {
   padding: 20px 16px;
 }
 
+.navigation-link:hover {
+  background-color: #f2f2f2;
+  opacity: 0, 6;
+}
+
+.navigation-link:focus {
+  background-color: #f2f2f2;
+  opacity: 0.8;
+}
+
+.navigation-link:active {
+  background-color: #f2f2f2;
+  opacity: 0.3;
+}
+
+
 .button-want {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -132,9 +185,9 @@ body {
   color: #FFFFFF;
   background-color: #756157;
   text-transform: uppercase;
-  margin-top: 14px;
   padding: 8px 50px;
   border-radius: 4px;
+  margin-left: 20px;
 }
 
 .main-index {
@@ -171,7 +224,8 @@ body {
 .welcome-text {
 
   padding-top: 69px;
-  padding-bottom: 21px;
+  padding-bottom: 69px;
+  margin-bottom: 21px;
 
 }
 
@@ -190,8 +244,9 @@ body {
 
 .text-description {
   margin: 0;
-  padding-bottom: 69px;
+
 }
+
 
 
 .reasons-list {
@@ -257,13 +312,31 @@ body {
 
 
 .reasons-title {
+
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 62px;
+  position: relative;
 
 }
+
+.reasons-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 88px;
+  left: 85px
+}
+
+.reasons-title-white::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 
 .reasons-description {
   margin: 0;
@@ -305,6 +378,7 @@ body {
   color: #000000;
   background-color: rgba(131, 179, 211, 0.12);
   padding: 81px 85px;
+  padding-top: 183px;
 }
 
 .accent-white {
@@ -328,21 +402,24 @@ body {
 .adventures-home {
   background-image: url("../images/icon/stays.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 81px;
+
 
 }
 
 .adventures-food {
   background-image: url(../images/icon/food.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 82px;
+
 }
 
 .adventures-souvenirs {
   background-image: url(../images/icon/souvenires.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 79px;
 }
+
 .search-hotel {
 
   width: 592px;
@@ -462,7 +539,14 @@ body {
   font-size: 18px;
   line-height: 24px;
   width: 452px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  padding-left: 20px;
+  background: #f2f2f2;
+
 }
+
+
 
 .button-subscribe {
   font-family: "PT Sans", sans-serif;
@@ -476,6 +560,8 @@ body {
   text-transform: uppercase;
   border: none;
   padding: 8px 50px 8px 50px;
+  border-radius: 0 4px 4px 0;
+
 
 }
 
@@ -499,45 +585,31 @@ body {
 
 .footer-social-list {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 180px;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
+
 }
 
 .footer-social-item {
   min-width: 46px;
   min-height: 46px;
 
+
 }
+
 
 .footer-social-link {
-display: block;
-background-color: #ffffff;
-background-position: center;
-background-size: 48px;
+
+  color: #83b3d3;
 }
 
-.footer-social-vk {
-  background-image: url("../images/social/social-vk.svg");
-
+.footer-social-link:hover {
+  color: #68a2ca
 }
 
-.footer-social-tg {
 
-background-image: url("../images/social/social-telegram.svg");
-}
 
-.footer-social-youtube {
-  background-image: url("../images/social/social-youtube.svg");
-}
 
-.footer-contacts {
-  margin-right: 40px;
-  margin-left: 40px;
 
-}
 
 .phone-contacts {
   font-family: "PT Sans", sans-serif;
@@ -547,6 +619,275 @@ background-image: url("../images/social/social-telegram.svg");
 }
 
 .html-accademy {}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+}
+
+.modal-conteiner-close {
+  display: none;
+}
+
+.modal-book {
+  min-width: 576px;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 64px 70px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  background-image: url("../images/icon/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: 64px 52px 460px 613px;
+  border: none;
+
+}
+
+
+.modal-title {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-right: 130px;
+  padding-bottom: 64px;
+}
+
+
+
+.modal-for-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+
+}
+
+.modal-form-for-date {
+  display: grid;
+  grid-template-columns: auto 440px;
+  align-items: center;
+
+}
+
+.field-date-arrival {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+  width: 440px;
+  background-color: #f2f2f2;
+  background-image: url(../images/icon/calendar.svg);
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  border: none;
+  padding: 12px 250px 12px 20px;
+
+}
+
+.error-comment {
+  grid-column: 2/3;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ff5757;
+  margin: 0;
+  padding-bottom: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+
+
+.field-date-departure {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+  width: 440px;
+  background-image: url(../images/icon/calendar.svg);
+  background-repeat: no-repeat;
+background-position: right 10px center;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding: 12px 250px 12px 20px;
+
+}
+
+.comment {
+  grid-column: 2/3;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  padding-bottom: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
+}
+
+
+
+.modal-form-for-persons {
+  display: grid;
+  grid-template-columns: 247px 242px;
+justify-content: space-between;
+  padding-bottom: 48px;
+}
+
+.people-group {
+  display: flex;
+  height: 48px;
+}
+
+
+
+.form-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people-minus {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding: 23px 13px;
+ text-align: center;
+}
+
+.people-plus {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding: 17px 13px;
+}
+
+.modal-input-persons {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 14px 10px;
+font-family: "PT Sans", sans-serif;
+font-weight: 700;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+}
+
+
+.button-found {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #83B3D3;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 18px 256px;
+  border: none;
+}
+
+.button-found:hover {
+background-color: #68a2ca;
+
+}
+
+.tooltip {
+
+
+}
+
+.tooltip-icon  {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+
+}
+
+.tooltip-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+}
+
+.tooltip-icon:hover .tooltip-img {
+background-color: #83b3d3
+}
+
+.tooltip-text {
+display: none;
+position: absolute;
+font-family: "PT Sans" sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #ffffff;
+background: #333333;
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+padding: 15px 18px 18px 22px;
+width: 256px;
+
+}
+
+.tooltip-icon:hover + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+content: "";
+  background-image: url("../images/icon/triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  transform: rotate(180deg);
+  top: 100%;
+  left: calc(50% - 10px);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.modal-input-persons {
+  width: 31px;
+}
 
 .main-inner {
   font-family: "PT Sans", sans-serif;
@@ -563,14 +904,15 @@ background-image: url("../images/social/social-telegram.svg");
   line-height: 78px;
   margin: 0;
   padding-top: 35px;
-  padding-left: 75px;
   text-align: left;
 
 }
 
 .inner-header {
-  display: flex;
+
   flex-direction: column;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 
@@ -592,14 +934,24 @@ background-image: url("../images/social/social-telegram.svg");
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
-  margin: o;
-  padding: 0;
+  margin: 0;
+  padding-bottom: 40px;
 
 }
 
 .breadcrambs-link {
   margin-right: 28px;
 }
+
+.breadcrambs-link-home {
+  background-image: url(../images/icon/icon-home.svg);
+}
+
+.arrow {
+  background-image: url(../images/icon/icon-arrow.svg);
+}
+
+
 
 .catalog-filter {
   font-family: "PT Sans", sans-serif;
@@ -608,12 +960,30 @@ background-image: url("../images/social/social-telegram.svg");
   font-size: 18px;
   line-height: 23px;
   display: flex;
-  width: 412px;
+  justify-content: space-between;
+
+}
+
+.catalog-hotels{
+padding-bottom: 70px;
+
+}
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.price-filter {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-list {
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 
@@ -621,7 +991,12 @@ background-image: url("../images/social/social-telegram.svg");
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  padding-bottom: 32px;
 
+}
+
+.catalog-filter-item {
+  padding-bottom: 16px;
 }
 
 .visually-hidden {
@@ -635,6 +1010,102 @@ background-image: url("../images/social/social-telegram.svg");
   overflow: hidden;
 }
 
+.price-filter-title {
+  padding-bottom: 32px;
+}
+
+.price-filter-from {
+  width: 143px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 112px 12px 20px;
+  margin-right: 2px;
+  background: #f2f2f2;
+border-radius: 4px 0 0 4px;
+border: none;
+appearance: textfield;
+}
+
+.price-filter-from::-webkit-outer-spin-button,
+.price-filter-from::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.price-filter-to {
+  width: 143px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 82px 12px 20px;
+  background: #f2f2f2;
+border-radius: 0 4px 4px 0;
+border: none;
+appearance: textfield;
+}
+
+.price-filter-to::-webkit-outer-spin-button,
+.price-filter-to::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+.range-wrapper-inputs {
+  margin-bottom: 48px;
+  width: 288px;
+  display: flex;
+}
+.range-scale {
+position: relative;
+height: 4px;
+background-color: #ffffff;
+opacity: 30%;
+
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background: #ffffff;
+}
+
+.rang-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
+
+.rang-toggle:active,
+.rang-toggle:focus {
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.buttonns-group-filter {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
 .button-go {
   font-family: inherit;
   font-weight: 700;
@@ -644,6 +1115,9 @@ background-image: url("../images/social/social-telegram.svg");
   background-color: #82b3d3;
   text-transform: uppercase;
   border: none;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  padding: 8px 50px 8px 50px;
 
 }
 
@@ -653,9 +1127,12 @@ background-image: url("../images/social/social-telegram.svg");
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
   text-transform: uppercase;
   border: none;
+
 
 }
 
@@ -676,6 +1153,9 @@ background-image: url("../images/social/social-telegram.svg");
   margin-right: 70px;
 
 }
+
+
+
 
 .hotel-card-conteiner {
   display: flex;
@@ -714,16 +1194,26 @@ background-image: url("../images/social/social-telegram.svg");
 }
 
 .button-cards-current {
+  background-image: url(../images/icon/view-icons.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
   width: 48px;
   height: 48px;
 }
 
 .button-every {
+  background-image: url(../images/icon/view-one.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 48px;
   height: 48px;
 }
 
 .button-list {
+  background-image: url(../images/icon/view-list.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 48px;
   height: 48px;
 }
@@ -833,6 +1323,39 @@ background-image: url("../images/social/social-telegram.svg");
 
 }
 
+.hotel-rating-stars {
+  align-self: center;
+  width: 100%;
+  background-repeat: space no-repeat;
+  background-position: 0 50%;
+  background-image: url("../images/rating-star.svg");
+  background-size: 1em auto;
+  height: 100%;
+  font-size: 18px;
+}
+
+.star4 {
+  width: calc(4em + 18px);
+}
+
+.star3 {
+  background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%, url("../images/rating-star.svg") no-repeat 48px 50%;
+
+}
+
+.star2 {
+  background: url("../images/rating-star.svg") no-repeat 0 50%, url("../images/rating-star.svg") no-repeat 24px 50%;
+}
+
+.rating {
+  font-size: 16px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 9px 22px 8px 23px;
+}
+
 .pagination {
   display: flex;
   margin: 0;
@@ -857,6 +1380,16 @@ background-image: url("../images/social/social-telegram.svg");
   line-height: 36px;
   text-decoration: none;
   padding: 12px 24px;
+  border-radius: 4px;
+
+}
+
+.pagination-link:hover {
+  background-color: #68a2ca;
+}
+
+.pagination-link:disabled {
+  color: rgba(255, 255, 255, 0.3);
 
 }
 
@@ -864,6 +1397,10 @@ background-image: url("../images/social/social-telegram.svg");
   color: #000000;
   background-color: #f2f2f2;
 
+}
+
+ .pagination-current:hover {
+  background-color: #f2f2f2;
 }
 
 .pagination-more {
