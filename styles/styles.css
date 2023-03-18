@@ -727,6 +727,18 @@ body {
 
 }
 
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83B3D3;
+}
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  opacity: 0.3;
+}
 
 .modal-title {
   font-family: "PT Sans", sans-serif;
@@ -746,7 +758,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  align-items: center;
+margin-right: 10px;
 
 }
 
@@ -812,6 +824,7 @@ body {
 .field-date-departure:hover {
   background-color: #e6e6e6;
 }
+
 .comment {
   grid-column: 2/3;
   font-weight: 400;
@@ -821,7 +834,6 @@ body {
   padding-bottom: 48px;
   padding-left: 20px;
   padding-right: 20px;
-
 
 }
 
@@ -837,8 +849,6 @@ body {
   height: 48px;
 }
 
-
-
 .form-label {
   display: flex;
   justify-content: space-between;
@@ -849,7 +859,25 @@ body {
   border-radius: 4px;
   border: none;
   padding: 15px 15px;
+  color: rgba(117, 97, 87, 0.3);
 
+}
+
+.people-minus:hover svg {
+fill: #000000;
+}
+
+.people-minus:focus {
+  outline: 3px solid #82b3d3;
+
+}
+
+.people-minus:focus svg {
+  fill: #000000;
+}
+
+.people-minus:active svg {
+  fill: #e5e5e5e5;
 }
 
 .people-plus {
@@ -857,6 +885,23 @@ body {
   border-radius: 4px;
   border: none;
   padding: 17px 13px;
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.people-plus:hover svg {
+  fill: #000000;
+}
+
+.people-plus:focus svg {
+fill: #000000;
+}
+.people-plus:focus {
+  outline: 3px solid #82b3d3;
+
+}
+
+.people-minus:active svg {
+  fill: #e5e5e5e5;
 }
 
 .modal-input-persons {
@@ -885,21 +930,21 @@ body {
   border: none;
 }
 
-.button-found:hover {
+.button-found:hover,
+.button-found:focus {
   background-color: #68a2ca;
 
 }
 
-.modal-close-button:hover {
-  background-color: #e6e6e6;
+.button-found:active {
+  background-color: #68a2ca;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.modal-close-button:focus {
-  background-color: #e6e6e6;
-  outline: 3px solid #83B3D3;
+.tooltip {
+  margin-right: 46px;
+
 }
-
-
 
 .tooltip-icon {
   border: none;
@@ -916,9 +961,6 @@ body {
   display: block;
 
 }
-
-
-
 
 .tooltip-text {
   display: none;
@@ -1036,8 +1078,7 @@ body {
   background-image: url(../images/icon/icon-home.svg);
   width: 12px;
   height: 12px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  margin-top: 5px;
 }
 
 .breadcrambs-link-home::after {
@@ -1067,16 +1108,23 @@ body {
   border-radius: 4px;
 }
 
-.control:hover .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.control-input:disabled + .control-mark {
-  background-color: rgba(255, 255, 255, 0.8);
-
+.control:hover {
+  opacity: 0.6;
 }
 
 
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input:active + .control-mark {
+  opacity: 0.3;
+
+}
+
+.control-input:focus + .contral-mark {
+  outline: 3px solid #83b3d3;
+}
 
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
@@ -1193,6 +1241,7 @@ body {
   border-radius: 4px 0 0 4px;
   border: none;
   appearance: textfield;
+  color: #000000;
 }
 
 .price-filter-from::-webkit-outer-spin-button,
@@ -1252,19 +1301,18 @@ body {
 
 
 .rang-toggle:hover {
-  background-color: #E6E6E6;
+  background-color: #ffffff;
 }
 
-.rang-toggle:focus {
-  outline: 2px solid #83B3D3;
-}
-
+.rang-toggle:focus,
 .rang-toggle:active {
-  border: 2px solid #83b3d3;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
+  outline: 2px solid #83b3d3;
 }
 
+.price-filter-from::placeholder {
+ color:#000000;
+ opacity: 1;
+}
 .price-filter-from:hover {
   background-color: #e6e6e6;
 }
@@ -1275,10 +1323,13 @@ body {
 }
 
 .price-filter-from:not(:placeholder-shown) {
-  background-color: #f2f2f2;
   outline: 2px solid #000000;
 }
 
+.price-filter-to::placeholder {
+  color:#000000;
+  opacity: 1;
+ }
 .price-filter-to:hover {
   background-color: #e6e6e6;
 }
