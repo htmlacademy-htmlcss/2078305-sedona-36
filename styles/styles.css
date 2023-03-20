@@ -787,7 +787,7 @@ margin: 51px 372px;
   line-height: 21px;
   color: #ff5757;
   margin: 0;
-  padding-bottom: 48px;
+  padding-bottom: 22px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -819,7 +819,7 @@ margin: 51px 372px;
   font-size: 16px;
   line-height: 21px;
   margin: 0;
-  padding-bottom: 48px;
+  padding-bottom: 23px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1062,7 +1062,7 @@ margin: 51px 372px;
 }
 
 .filter-conteiner {
-  padding: 35px 70px 40px 70px;
+  padding: 35px 70px 60px 70px;
 }
 .control {
   position: relative;
@@ -1160,7 +1160,7 @@ margin: 51px 372px;
 .catalog-filter-group {
   border: none;
   margin: 0;
-  padding-right: 39px;
+  padding: 0 57px 0 0;
 }
 
 .price-filter {
@@ -1527,7 +1527,7 @@ line-height: 24px;
 }
 
 .hotels-card-conteiner {
-  margin-top: 40px;
+  margin-top: 53px;
   padding-left: 70px;
   padding-bottom: 60px;
   padding-right: 70px;
@@ -1768,7 +1768,7 @@ line-height: 24px;
   color: #000000;
   width: 1200px;
   margin: 0 auto;
-  padding: 96px 258px 104px;
+  padding: 140px 258px 104px;
 }
 
 
