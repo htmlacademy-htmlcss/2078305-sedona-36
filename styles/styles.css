@@ -32,7 +32,7 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   min-height: 100%;
-  min-width: 100%;
+
 }
 
 .wrapper {
@@ -135,7 +135,7 @@ body {
   padding: 5px 5px 5px 4px;
 }
 
-.navigation-link {
+.navigation-link, .navigation-link-current {
   display: block;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -162,6 +162,18 @@ body {
   opacity: 0.3;
 }
 
+.navigation-link-current {
+  display: block;
+  position: relative;
+}
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #756157;
+  bottom: -1px;
+  width: 100%;
+}
 
 .button-want {
   font-family: "PT Sans", sans-serif;
@@ -430,6 +442,7 @@ body {
 
 
 .search-hotel-description {
+  font-size: 22px;
   margin: 0;
   padding-bottom: 54px;
 }
