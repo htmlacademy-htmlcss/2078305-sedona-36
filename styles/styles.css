@@ -204,6 +204,10 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button-want:disabled {
+  background: #e5e5e5;
+}
+
 .main-index {
   font-family: "PT Sans", sans-serif;
   color: #000000;
@@ -711,27 +715,27 @@ margin: 51px 372px;
   width: 52px;
   height: 52px;
   border-radius: 50%;
+  color: #000000;
   background-color: #f2f2f2;
-  background-image: url("../images/icon/close.svg");
-  background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   margin: 64px 52px 460px 613px;
   border: none;
 }
 
-.modal-close-button:hover {
+.modal-close-button:hover,
+.modal-close-button:active {
   background-color: #e6e6e6;
 }
 
-.modal-close-button:focus {
+.modal-close-button:focus  {
   background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
 }
 
-.modal-close-button:active {
+.modal-close-button:active svg {
   background-color: #e6e6e6;
-  opacity: 0.3;
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .modal-title {
@@ -758,6 +762,7 @@ margin: 51px 372px;
   display: grid;
   grid-template-columns: auto 440px;
   align-items: center;
+  margin-bottom: 23px;
 }
 
 .field-date-arrival {
@@ -769,7 +774,7 @@ margin: 51px 372px;
   width: 440px;
   background-color: #f2f2f2;
   background-image: url("../images/icon/calendar.svg");
-  background-position: right 10px center;
+  background-position: right 20px center;
   background-repeat: no-repeat;
   border-radius: 4px;
   border: none;
@@ -787,9 +792,9 @@ margin: 51px 372px;
   line-height: 21px;
   color: #ff5757;
   margin: 0;
-  padding-bottom: 22px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 4px;
 }
 
 
@@ -802,7 +807,7 @@ margin: 51px 372px;
   width: 440px;
   background-image: url("../images/icon/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 20px center;
   background-color: #f2f2f2;
   border-radius: 4px;
   border: none;
@@ -819,16 +824,16 @@ margin: 51px 372px;
   font-size: 16px;
   line-height: 21px;
   margin: 0;
-  padding-bottom: 23px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 4px;
 }
 
 .modal-form-for-persons {
   display: grid;
   grid-template-columns: 247px 242px;
   justify-content: space-between;
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .people-group {
@@ -862,7 +867,7 @@ margin: 51px 372px;
 }
 
 .people-minus:active svg {
-  fill: #e5e5e5e5;
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .people-plus {
@@ -885,8 +890,8 @@ margin: 51px 372px;
   outline: 3px solid #82b3d3;
 }
 
-.people-minus:active svg {
-  fill: #e5e5e5e5;
+.people-plus:active svg {
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .modal-input-persons {
@@ -898,6 +903,14 @@ margin: 51px 372px;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
+}
+
+.modal-for-adults {
+  padding-top: 10px;
+}
+
+.modal-for-children {
+  padding-top: 10px;
 }
 
 
@@ -926,14 +939,15 @@ margin: 51px 372px;
 }
 
 .tooltip {
+  position: relative;
   margin-right: 46px;
 }
 
 .tooltip-icon {
   border: none;
   background-color: transparent;
+  margin-top: 12px;
   padding: 0;
-  margin: 0;
   display: block;
 }
 
@@ -957,6 +971,8 @@ margin: 51px 372px;
   border-radius: 10px;
   padding: 15px 18px 18px 22px;
   width: 256px;
+  left: -117px;
+  top: 54px;
 }
 
 .tooltip-icon:hover + .tooltip-text {
@@ -969,8 +985,7 @@ margin: 51px 372px;
   width: 19px;
   height: 9px;
   position: absolute;
-  transform: rotate(180deg);
-  top: 100%;
+  bottom: 100%;
   left: calc(50% - 10px);
 
   margin-left: auto;
@@ -1093,7 +1108,7 @@ margin: 51px 372px;
   opacity: 0.3;
 }
 
-.control-input:focus + .contral-mark {
+.control-input:focus + .control-mark {
   outline: 3px solid #83b3d3;
 }
 
@@ -1155,12 +1170,12 @@ margin: 51px 372px;
 
 .price {
   display: flex;
-  padding-left: 74px;
+  padding-left: 54px;
 }
 .catalog-filter-group {
   border: none;
   margin: 0;
-  padding: 0 57px 0 0;
+  padding: 0 64px 0 0;
 }
 
 .price-filter {
@@ -1341,12 +1356,12 @@ line-height: 24px;
 
 .toggle-min {
   top: -8px;
-  left: -10px;
+
 }
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: 1px;
 }
 
 .buttonns-group-filter {
@@ -1432,6 +1447,7 @@ line-height: 24px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   background-color: #ffffff;
+  padding: 11px 99px 14px 17px;
 }
 
 
@@ -1458,7 +1474,7 @@ line-height: 24px;
   padding-left: 70px;
   margin-top: 50px;
   padding-right: 70px;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .icons-cards {
@@ -1527,9 +1543,7 @@ line-height: 24px;
 }
 
 .hotels-card-conteiner {
-  margin-top: 53px;
   padding-left: 70px;
-  padding-bottom: 60px;
   padding-right: 70px;
 }
 
@@ -1539,15 +1553,15 @@ line-height: 24px;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 40px;
-  gap: 20px;
+  margin-bottom: 80px;
+  gap: 21px;
 }
 
 .hotel-card {
   display: grid;
   grid-template-columns: repeat(2, 140px);
   background-color: #ffffff;
-  gap: 16px 20px;
+  gap: 16px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -1564,6 +1578,7 @@ line-height: 24px;
   font-size: 24px;
   line-height: 28px;
   margin: 0;
+  padding-top: 14px;
 }
 
 .hotel-text {
@@ -1581,7 +1596,7 @@ line-height: 24px;
 
 .hotel-card-photo {
   display: block;
-  padding-bottom: 16px;
+
 }
 
 .hotel-card-button-more {
@@ -1705,7 +1720,7 @@ line-height: 24px;
   border-radius: 4px;
   text-align: center;
   text-transform: uppercase;
-  padding: 9px 22px 8px 23px;
+  padding: 8px 20px 8px 23px;
   color: #333333;
 }
 
@@ -1732,14 +1747,19 @@ line-height: 24px;
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
-  padding: 12px 24px;
+  padding: 8px 20px;
   border-radius: 4px;
 }
 
-.pagination-link:hover {
+.pagination-link:hover,
+.pagination-link:focus {
   background-color: #68a2ca;
 }
 
+.pagination-link:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
 .pagination-link:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1767,8 +1787,8 @@ line-height: 24px;
   font-size: 22px;
   color: #000000;
   width: 1200px;
-  margin: 0 auto;
-  padding: 140px 258px 104px;
+  margin-top: 60px;
+  padding: 93px 258px 104px;
 }
 
 
