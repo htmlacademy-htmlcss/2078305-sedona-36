@@ -153,20 +153,22 @@ body {
 
 }
 
-.navigation-item-menu:hover {
+.navigation-link:hover {
   background-color: #f2f2f2;
   opacity: 0, 6;
 }
 
-.navigation-item-menu:focus {
+.navigation-link:focus  {
   background-color: #f2f2f2;
   opacity: 0.8;
 }
 
-.navigation-item-menu:active {
+.navigation-link:active {
   background-color: #f2f2f2;
 
 }
+
+
 
 .navigation-link-current {
   display: block;
